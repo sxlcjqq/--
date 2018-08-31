@@ -3,3 +3,5 @@
 
 需要打开F12，模拟移动端看效果
 
+效果如图
+![image](https://github.com/sxlcjqq/meichetang/blob/master/example.jpg)
