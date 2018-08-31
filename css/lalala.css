@@ -1,0 +1,720 @@
+* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			cursor: default;
+			-webkit-backface-visibility:hidden;
+		}
+		html,body,#slider{
+		overflow:hidden;
+		top:0;
+		left:0;
+		font: 14px/1.2 Helvetica Neue, Microsoft YaHei, Tahoma, Helvetica, Arial,
+		\\5B8B\4F53, sans-serif
+		}
+		html,body,#slider,section{
+		height:100%;
+		width:100%;
+		padding:0px;
+		margin:0px;
+		display:block;
+		position:relative;
+		}
+		input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+			font-family: "Microsoft YaHei", "heiti sc";
+			color: #2d2d2d;
+		}
+		input:-moz-placeholder, textarea:-moz-placeholder {
+			font-family: "Microsoft YaHei", "heiti sc";
+			color: #2d2d2d;
+		}
+		input::-moz-placeholder, textarea::-moz-placeholder {
+			font-family: "Microsoft YaHei", "heiti sc";
+			color: #2d2d2d;
+		}
+		input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+		    font-family: "Microsoft YaHei", "heiti sc";
+			color: #2d2d2d;
+		}
+			section{
+			position:absolute;
+			bottom:0;
+			left:0; 
+			font-size:50px;
+			text-align:center;
+			line-height:100px;
+			background:url(../img/1.jpg) no-repeat 100% center;
+			z-index:0;
+			}
+			.arrow{
+			    position: absolute;
+			    bottom: 4%;
+			    left: 0;
+			    width: 100%;
+			    height: 4%;
+			    opacity:0;
+			    z-index: 9999;
+				animation: arrow 1s ease-in-out 0.5s infinite normal;
+				-moz-animation: arrow 1s ease-in-out 0s infinite normal;
+				-webkit-animation: arrow 1s ease-in-out 0s infinite normal;
+				-o-animation:  arrow 1s ease-in-out 0s infinite normal;
+				
+			}
+			.arrow i{
+			    height: 40%;
+			    display: block;
+			    background: url(../img/arrow.png) no-repeat center;
+			    background-size: contain;
+			}
+			@keyframes arrow
+			{
+			0% {opacity: 0;bottom: 0%;}
+			66%{opacity: 0.8;bottom: 3.5%;}
+			100% {opacity: 0;bottom: 4%;}
+			}
+			
+			@-moz-keyframes arrow /* Firefox */
+			{
+			0% {opacity: 0;bottom: 0%;}
+			66%{opacity: 0.8;bottom: 3.5%;}
+			100% {opacity: 0;bottom: 4%;}
+			}
+			
+			@-webkit-keyframes arrow /* Safari 和 Chrome */
+			{
+			0% {opacity: 0;bottom: 0%;}
+			66%{opacity: 0.8;bottom: 3.5%;}
+			100% {opacity: 0;bottom: 4%;}
+			}
+			
+			@-o-keyframes arrow /* Opera */
+			{
+			0% {opacity: 0;bottom: 0%;}
+			66%{opacity: 0.8;bottom: 3.5%;}
+			100% {opacity: 0;bottom: 4%;}
+			}
+			
+			.floatimg{
+				position:absolute;
+				top:5%;
+				left:0;
+				width:100%;
+				height:100%;
+				transform: scale(1.25);
+				z-index:1;
+			    background: url(../img/7.png) no-repeat top center;
+			    background-size: contain;
+			    transition: transform .6s linear 0s;
+				-moz-transition:transform .6s linear 0s;
+				-webkit-transition:transform .6s linear 0s;
+				-o-transition:transform .6s linear 0s;
+			}
+			section.active .floatimg{
+				transform: scale(1);
+			    transition: transform .6s linear 0s;
+				-moz-transition:transform .6s linear 0s;
+				-webkit-transition:transform .6s linear 0s;
+				-o-transition:transform .6s linear 0s;
+			}
+			
+			.car{
+			    position: absolute;
+			    width: 100%;
+			    height: 55%;
+			    z-index: 2;
+			    top: 14%;
+			    background: url(../img/6.png) no-repeat top center;
+			    background-size: contain;
+			    
+			}
+			
+			section.active .car{
+				animation: bounceInUp .5s ease 0.2s normal both;
+				-moz-animation: bounceInUp .5s ease 0.2s normal both;
+				-webkit-animation: bounceInUp .5s ease 0.2s normal both;
+				-o-animation:  bounceInUp .5s ease 0.2s normal both;
+			}
+			@keyframes bounceInUp
+			{
+			0% {top: 100%;}
+			40%{top: 0%;}
+			60%{top: 11%;}
+			80%{top: 8%;}
+			100% {top: 14%;}
+			}
+			
+			@-webkit-keyframes bounceInUp /* Safari 和 Chrome */
+			{
+			0% {top: 100%;}
+			40%{top: 0%;}
+			60%{top: 11%;}
+			80%{top: 8%;}
+			100% {top: 14%;}
+			}
+			@-moz-keyframes bounceInUp /* Firefox */
+			{
+			0% {top: 100%;}
+			40%{top: 0%;}
+			60%{top: 11%;}
+			80%{top: 8%;}
+			100% {top: 14%;}
+			}
+			@-o-keyframes bounceInUp /* bounceInUp */
+			{
+			0% {top: 100%;}
+			40%{top: 0%;}
+			60%{top: 11%;}
+			80%{top: 8%;}
+			100% {top: 14%;}
+			}
+			
+			.logo2{
+		        position: absolute;
+			    width: 86%;
+			    left: 6%;
+			    height: 33%;
+			    z-index: 3;
+			    top: 50%;
+			    background: url(../img/2.png) no-repeat top center;
+			    background-size: contain;
+			    
+			}
+			section.active .logo2{
+				animation: bounceInUp2 .7s ease 0s normal both;
+				-moz-animation: bounceInUp2 .7s ease 0s normal both;
+				-webkit-animation: bounceInUp2 .7s ease 0s  normal both;
+				-o-animation:  bounceInUp2 .7s ease 0s normal both;
+			}
+			
+			@keyframes bounceInUp2
+			{
+			0% {top: -30%;}
+			40%{top: 55%;}
+			60%{top: 30%;}
+			80%{top: 45%;}
+			100% {top: 50%;}
+			}
+			
+			@-webkit-keyframes bounceInUp2 /* Safari 和 Chrome */
+			{
+			0% {top: -30%;}
+			40%{top: 55%;}
+			60%{top: 30%;}
+			80%{top: 45%;}
+			100% {top: 50%;}
+			}
+			@-moz-keyframes bounceInUp2 /* Firefox */
+			{
+			0% {top: -30%;}
+			40%{top: 55%;}
+			60%{top: 30%;}
+			80%{top: 45%;}
+			100% {top: 50%;}
+			}
+			
+			@-o-keyframes bounceInUp2 /* bounceInUp */
+			{
+			0% {top: -30%;}
+			40%{top: 55%;}
+			60%{top: 30%;}
+			80%{top: 45%;}
+			100% {top: 50%;}
+			}
+			
+			.logo{
+			    position: absolute;
+			    width: 50%;
+			    right: 10%;
+			    height: 100%;
+			    z-index: 4;
+			    top: -8%;
+			    background: url(../img/5.png) no-repeat top center;
+			    background-size: contain;
+			    
+			    transition: top .3s linear 0s;
+				-moz-transition:top .3s linear 0s;
+				-webkit-transition:top .3s linear 0s;
+				-o-transition:top .3s linear 0s;
+			}
+			
+			section.active .logo{
+			    top: 5%;
+			    transition: top .3s linear 0s;
+				-moz-transition:top .3s linear 0s;
+				-webkit-transition:top .3s linear 0s;
+				-o-transition:top .3s linear 0s;
+			}
+			
+			.floatleft{
+			    position: absolute;
+			    width: 33%;
+			    right: 7%; 
+			    height: 100%;
+			    z-index: 3;
+			    top: 27%;
+			    background: url(../img/4.png) no-repeat top center;
+			    background-size: contain;
+			    
+			}
+			section.active .floatleft{
+				animation: bounceInLeft .4s ease .7s normal both;
+				-moz-animation: bounceInLeft .4s ease .7s normal both;
+				-webkit-animation: bounceInLeft .4s ease .7s  normal both;
+				-o-animation:  bounceInLeft .4s ease .7s normal both;
+			}
+			
+			@keyframes bounceInLeft
+			{
+			0% {right: -50%;}
+			60%{right: 6%;}
+			80%{right: -10%;}
+			100% {right: 7%;}
+			}
+			
+			@-webkit-keyframes bounceInLeft /* Safari 和 Chrome */
+			{
+			0% {right: -50%;}
+			60%{right: 6%;}
+			80%{right: -10%;}
+			100% {right: 7%;}
+			}
+			@-moz-keyframes bounceInLeft /* Firefox */
+			{
+			0% {right: -50%;}
+			60%{right: 6%;}
+			80%{right: -10%;}
+			100% {right: 7%;}
+			}
+			
+			@-o-keyframes bounceInLeft /* bounceInUp */
+			{
+			0% {right: -50%;}
+			60%{right: 6%;}
+			80%{right: -10%;}
+			100% {right: 7%;}
+			}
+			
+			
+			
+			.floatright{
+			    position: absolute;
+			    width: 33%;
+			    left: 7%; 
+			    height: 100%;
+			    z-index: 5;
+			    top: 18%;
+			    background: url(../img/3.png) no-repeat top center;
+			    background-size: contain;
+			    
+			}
+			section.active .floatright{
+				animation: bounceInRight .4s ease .5s normal both;
+				-moz-animation: bounceInRight .4s ease .5s normal both;
+				-webkit-animation: bounceInRight .4s ease .5s  normal both;
+				-o-animation:  bounceInRight .4s ease .5s normal both;
+			}
+			
+			@keyframes bounceInRight
+			{
+			0% {left: -50%;}
+			60%{left: 6%;}
+			80%{left: -10%;}
+			100% {left: 7%;}
+			}
+			
+			@-webkit-keyframes bounceInRight /* Safari 和 Chrome */
+			{
+			0% {left: -50%;}
+			60%{left: 6%;}
+			80%{left: -10%;}
+			100% {left: 7%;}
+			}
+			@-moz-keyframes bounceInRight /* Firefox */
+			{
+			0% {left: -50%;}
+			60%{left: 6%;}
+			80%{left: -10%;}
+			100% {left: 7%;}
+			}
+			
+			@-o-keyframes bounceInRight /* bounceInUp */
+			{
+			0% {left: -50%;}
+			60%{left: 6%;}
+			80%{left: -10%;}
+			100% {left: 7%;}
+			}
+			
+			.tip1{
+				position:absolute;
+				bottom:5%;
+			    left: 5%;
+    			width: 90%;
+				height:7%;
+				z-index:5;
+				opacity:0;
+			    background: url(../img/19.png) no-repeat top center;
+			    background-size: contain;
+			    transition: bottom .3s linear .5s,opacity .6s linear .5s;
+				-moz-transition:bottom .3s linear .5s,opacity .6s linear .5s;
+				-webkit-transition:bottom .3s linear .5s,opacity .6s linear .5s;
+				-o-transition:bottom .3s linear .5s,opacity .6s linear .5s;
+			}
+			section.active .tip1{
+				bottom:18%;
+				opacity:1;
+			    transition: bottom .3s linear .5s,opacity .6s linear .5s;
+				-moz-transition:bottom .3s linear .5s,opacity .6s linear .5s;
+				-webkit-transition:bottom .3s linear .5s,opacity .6s linear .5s;
+				-o-transition:bottom .3s linear .5s,opacity .6s linear .5s;
+			}
+			.tip2{
+				position:absolute;
+				bottom:8%;
+				width:0px;
+				left:20%;
+				height:7%;
+				z-index:5;
+    			font-size: 15px;
+				color:#FFFFFF;
+				text-align:center;
+			    transform: rotate(280deg);
+			    overflow:hidden;
+				line-height: initial;
+			    transition: width .5s linear .7s,transform .5s linear .7s;
+				-moz-transition:width .5s linear .7s,transform .5s linear .7s;
+				-webkit-transition:width .5s linear .7s,transform .5s linear .7s;
+				-o-transition:width .5s linear .7s,transform .5s linear .7s;
+			}
+			section.active .tip2{
+				width:60%;
+			    transform: rotate(0deg);
+			    transition: width .5s linear .7s,transform .5s linear .7s;
+				-moz-transition: width .5s linear .7s,transform .5s linear .7s;
+				-webkit-transition: width .5s linear .7s,transform .5s linear .7s;
+				-o-transition: width .5s linear .7s,transform .5s linear .7s;
+			}
+			.car.bottom{
+			    background: url(../img/14.png) no-repeat bottom center;
+    			background-size: contain;
+			    top:40%;z-index: 3;    height: 40%;
+			}
+			section.active .car.bottom{
+				animation: bounceInUp3 .5s ease 0.2s normal both;
+				-moz-animation: bounceInUp3 .5s ease 0.2s normal both;
+				-webkit-animation: bounceInUp3 .5s ease 0.2s normal both;
+				-o-animation:  bounceInUp3 .5s ease 0.2s normal both;
+			}
+			@keyframes bounceInUp3
+			{
+			0% {top: 100%;}
+			40%{top: 45%;}
+			60%{top: 75%;}
+			80%{top: 50%;}
+			100% {top: 60%;}
+			}
+			
+			@-webkit-keyframes bounceInUp3 /* Safari 和 Chrome */
+			{
+			0% {top: 100%;}
+			40%{top: 45%;}
+			60%{top: 75%;}
+			80%{top: 50%;}
+			100% {top: 60%;}
+			}
+			@-moz-keyframes bounceInUp3 /* Firefox */
+			{
+			0% {top: 100%;}
+			40%{top: 45%;}
+			60%{top: 75%;}
+			80%{top: 50%;}
+			100% {top: 60%;}
+			}
+			@-o-keyframes bounceInUp3 /* bounceInUp */
+			{
+			0% {top: 100%;}
+			40%{top: 45%;}
+			60%{top: 75%;}
+			80%{top: 50%;}
+			100% {top: 60%;}
+			}
+			
+			.logo2.bottom{    
+				width: 30%;
+			    top: 80%;
+			    left: 67%;
+			    background: url(../img/20.png) no-repeat top center;
+			    background-size: contain;
+			}
+			section.active .logo2.bottom{
+				animation: bounceInUp4 .7s ease 0s normal both;
+				-moz-animation: bounceInUp4 .7s ease 0s normal both;
+				-webkit-animation: bounceInUp4 .7s ease 0s  normal both;
+				-o-animation:  bounceInUp4 .7s ease 0s normal both;
+			}
+			
+			@keyframes bounceInUp4
+			{
+			0% {top: 30%;}
+			40%{top: 78%;}
+			60%{top: 60%;}
+			80%{top: 86%;}
+			100% {top: 79.5%;}
+			}
+			
+			@-webkit-keyframes bounceInUp4 /* Safari 和 Chrome */
+			{
+			0% {top: 30%;}
+			40%{top: 78%;}
+			60%{top: 60%;}
+			80%{top: 86%;}
+			100% {top: 79.5%;}
+			}
+			@-moz-keyframes bounceInUp4 /* Firefox */
+			{
+			0% {top: 30%;}
+			40%{top: 78%;}
+			60%{top: 60%;}
+			80%{top: 86%;}
+			100% {top: 79.5%;}
+			}
+			
+			@-o-keyframes bounceInUp4 /* bounceInUp */
+			{
+			0% {top: 30%;}
+			40%{top: 78%;}
+			60%{top: 60%;}
+			80%{top: 86%;}
+			100% {top: 79.5%;}
+			}
+			
+			
+			.tip3{
+				position:absolute;
+				TOP:13.5%;
+				width:80%;
+				height:10%;
+				z-index:5;
+			    background: url(../img/9.png) no-repeat top center;
+			    background-size: contain;
+			    opacity:0;
+			    left:-60%;
+			    transition: left .5s linear .7s,opacity .5s linear .7s;
+				-moz-transition: left .5s linear .7s,opacity .5s linear .7s;
+				-webkit-transition: left .5s linear .7s,opacity .5s linear .7s;
+				-o-transition: left .5s linear .7s,opacity .5s linear .7s;
+			}
+			section.active .tip3{
+				left:10%;
+			    opacity:1;
+			    transition: left .5s linear .7s,opacity .5s linear .7s;
+				-moz-transition: left .5s linear .7s,opacity .5s linear .7s;
+				-webkit-transition: left .5s linear .7s,opacity .5s linear .7s;
+				-o-transition: left .5s linear .7s,opacity .5s linear .7s;
+			}
+			.tip4{
+				position: absolute;
+			    TOP: 90%;
+			    width: 84%;
+			    height: 55%;
+			    z-index: 2;
+			    background: #fc5224;
+			    opacity: 0;
+			    left: 8%;
+			    transition: top .5s linear .9s,opacity .5s linear .9s;
+				-moz-transition: top .5s linear .9s,opacity .5s linear .9s;
+				-webkit-transition: top .5s linear .9s,opacity .5s linear .9s;
+				-o-transition: top .5s linear .9s,opacity .5s linear .9s;
+			}
+			section.active .tip4{
+				TOP:17%;
+			    opacity:1;
+			    transition: top .5s linear .9s,opacity .5s linear .9s;
+				-moz-transition: top .5s linear .9s,opacity .5s linear .9s;
+				-webkit-transition: top .5s linear .9s,opacity .5s linear .9s;
+				-o-transition: top .5s linear .9s,opacity .5s linear .9s;
+			}
+			.tip8{
+			    height: 18%;
+			    width: 0%;
+			    left: 7%;
+			    position: absolute;
+			    transform: rotate(280deg);
+			    transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+				-moz-transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+				-webkit-transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+				-o-transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+			}
+			section.active .tip8{
+				width:86%;
+			    transform: rotate(0deg);
+			    transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+				-moz-transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+				-webkit-transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+				-o-transition: width .5s linear 1.4s,transform .5s linear 1.4s;
+			}
+			.tip5{
+			    background: url(../img/8.png) no-repeat top center;
+			    background-size: contain;top: 23%;
+			}
+			.tip6{
+			    background: url(../img/11.png) no-repeat top center;
+			    background-size: contain;top: 48%;
+			}
+			.tip7{
+			    background: url(../img/12.png) no-repeat top center;
+			    background-size: contain;top: 73%;
+			}
+			.tip9{
+			    background: url(../img/13.png) no-repeat top center;
+			    background-size: contain;
+			}
+			.tip11{
+			    background: url(../img/15.png) no-repeat top center;
+			    background-size: contain;
+			}
+			.tip12{
+			    background: url(../img/16.png) no-repeat top center;
+			    background-size: contain;top: 20%;
+			}
+			.input{
+		        width: 90%;
+			    padding: 0 5px;
+			    left: 5%;
+			    position: absolute;
+			    top: 15%;
+			    border:1px solid #231815;
+			    font-size:16px;
+			    line-height: normal;
+			    color:#000000;
+		        height: 80%;
+			}
+			.tip10{
+			background:none !important;
+			}
+			.botton{
+	           width: 50%;
+			    left: 25%;
+			    position: absolute;
+			    top: 65%;
+			    background-color: #ffc132;
+			    border-radius: 35px;
+			    text-align: center;
+			    font-size: 16px;
+			    line-height: normal;
+			    color: #000000;
+			    padding: 10px 0;
+			    z-index: 8;
+			}
+			.tiptele{
+		        background: url(../img/10.png) no-repeat top center;
+			    background-size: contain;
+			    top: 50%;
+			    height: 20%;
+			}
+			.tip13{
+				font-size: 18px;
+			    color: #ffffff;
+			    width: 100% !important;
+			    left: 0;
+			    top: 80%;
+		    }
+		    .floatleft3{
+		        position: absolute;
+			    width: 28%;
+			    right: 14%;
+			    height: 100%;
+			    z-index: 3;
+			    top: 0;
+			    background: url(../img/17.png) no-repeat top center;
+			    background-size: contain;
+			    
+			}
+			section.active .floatleft3{
+				animation: bounceInLeft3 .5s ease .8s normal both;
+				-moz-animation: bounceInLeft3 .5s ease .8s normal both;
+				-webkit-animation: bounceInLeft3 .5s ease .8s  normal both;
+				-o-animation:  bounceInLeft3 .5s ease .8s normal both;
+			}
+			
+			@keyframes bounceInLeft3
+			{
+			0% {top: -20%;}
+			60%{top: 18%;}
+			80%{top: 12%;}
+			100% {top: 15%;}
+			}
+			
+			@-webkit-keyframes bounceInLeft3 /* Safari 和 Chrome */
+			{
+			0% {top: -20%;}
+			60%{top: 18%;}
+			80%{top: 12%;}
+			100% {top: 15%;}
+			}
+			@-moz-keyframes bounceInLeft3 /* Firefox */
+			{
+			0% {top: -20%;}
+			60%{top: 18%;}
+			80%{top: 12%;}
+			100% {top: 15%;}
+			}
+			
+			@-o-keyframes bounceInLeft3 /* bounceInUp */
+			{
+			0% {top: -20%;}
+			60%{top: 18%;}
+			80%{top: 12%;}
+			100% {top: 15%;}
+			}
+			
+			
+			
+			.floatright3{
+		        position: absolute;
+			    width: 20%;
+			    left: 6%;
+			    height: 100%;
+			    z-index: 5;
+			    top: 39%;
+			    background: url(../img/18.png) no-repeat top center;
+			    background-size: contain;
+			    
+			}
+			section.active .floatright3{
+				animation: bounceInRight3 .5s ease .7s normal both;
+				-moz-animation: bounceInRight3 .5s ease .7s normal both;
+				-webkit-animation: bounceInRight3 .5s ease .7s  normal both;
+				-o-animation:  bounceInRight3 .5s ease .7s normal both;
+			}
+			
+			@keyframes bounceInRight3
+			{
+			0% {top: 50%;left:-40%;}
+			60% {top: 39%;left:6%;}
+			80% {top: 40%;left:-0%;}
+			100% {top: 39%;left: 6%;}
+			}
+			
+			@-webkit-keyframes bounceInRight3 /* Safari 和 Chrome */
+			{
+			0% {top: 50%;left:-40%;}
+			60% {top: 39%;left:6%;}
+			80% {top: 40%;left:-0%;}
+			100% {top: 39%;left: 6%;}
+			}
+			@-moz-keyframes bounceInRight3 /* Firefox */
+			{
+			0% {top: 120%;}
+			50%{top: 45%;}
+			80%{top: 50%;}
+			100% {top: 39%;}
+			}
+			
+			@-o-keyframes bounceInRight3 /* bounceInUp */
+			{
+			0% {top: 120%;}
+			50%{top: 45%;}
+			80%{top: 50%;}
+			100% {top: 39%;}
+			}
